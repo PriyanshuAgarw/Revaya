@@ -1,119 +1,127 @@
-<!-- Start of index.html (Revaya Website) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Revaya - Nature In Every Drop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfaf4;
-      color: #3e3e3e;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fdfaf4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      font-family: 'Lora', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+    .button {
+      background-color: #4d8060;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #3e6b50;
     }
     nav {
       background-color: #f3e9dc;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
+      padding: 10px 0;
+      text-align: center;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 100;
     }
     nav a {
+      margin: 0 15px;
+      color: #333;
       text-decoration: none;
-      color: #3e3e3e;
-      font-weight: bold;
+      font-weight: 600;
     }
-    header {
-      background-color: #f3e9dc;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin-top: 5px;
-      font-size: 1.2rem;
-      color: #6e6e6e;
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
     .offers {
-      background-color: #fff3e6;
-      padding: 15px;
+      background-color: #fff8ec;
       text-align: center;
       font-size: 1.1rem;
+      padding: 20px;
     }
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
     }
     .product {
-      background-color: white;
+      background-color: #fff;
       border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       text-align: center;
     }
     .product img {
-      width: 100%;
-      max-width: 180px;
+      max-width: 160px;
+      height: auto;
       margin-bottom: 10px;
     }
     .product h3 {
-      margin-bottom: 5px;
+      font-family: 'Lora', serif;
+      margin: 10px 0;
     }
     .price {
-      font-size: 1rem;
-      color: #777;
       text-decoration: line-through;
+      color: #888;
+      font-size: 0.9rem;
     }
     .offer-price {
       font-size: 1.2rem;
-      color: #d9534f;
-    }
-    .about-contact {
-      padding: 20px;
-      background-color: #fdf6ee;
-    }
-    .about-contact h2 {
-      font-size: 1.5rem;
-      color: #5a5a5a;
-    }
-    .about-contact p {
-      margin: 10px 0;
-      line-height: 1.6;
+      color: #b9473d;
+      font-weight: bold;
     }
     footer {
       background-color: #f3e9dc;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
       font-size: 0.9rem;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #5a9c8d;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Revaya</h1>
     <p>Nature In Every Drop</p>
+    <a href="#products" class="button">Shop Now</a>
   </header>
 
   <nav>
@@ -123,64 +131,77 @@
   </nav>
 
   <div class="offers">
-    <p><strong>Introductory Offers:</strong> Flat 10% OFF on all products | Free Shipping on orders above ₹999</p>
+    <p><strong>Introductory Offers:</strong> Flat 10% OFF | Free Shipping on orders above ₹999</p>
   </div>
 
-  <section class="products" id="products">
-    <div class="product">
-      <img src="https://i.imgur.com/zQmYocN.jpeg" alt="Body Lotion">
-      <h3>Body Lotion - 300ml</h3>
-      <p class="price">MRP ₹639</p>
-      <p class="offer-price">Offer Price ₹575</p>
-      <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
-    </div>
-    <div class="product">
-      <h3>Hair Oil - 100ml</h3>
-      <p class="price">MRP ₹799</p>
-      <p class="offer-price">Offer Price ₹719</p>
-      <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
-    </div>
-    <div class="product">
-      <img src="https://i.imgur.com/Jyb1i4n.jpeg" alt="Avocado Shampoo">
-      <h3>Avocado + Moringa Shampoo - 200ml</h3>
-      <p class="price">MRP ₹599</p>
-      <p class="offer-price">Offer Price ₹539</p>
-      <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
-    </div>
-    <div class="product">
-      <img src="https://i.imgur.com/Jyb1i4n.jpeg" alt="Avocado Shampoo">
-      <h3>Avocado + Moringa Shampoo - 300ml</h3>
-      <p class="price">MRP ₹799</p>
-      <p class="offer-price">Offer Price ₹719</p>
-      <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
-    </div>
-    <div class="product">
-      <img src="https://i.imgur.com/9eZB8So.jpeg" alt="Rosemary Shampoo">
-      <h3>Hibiscus + Rosemary Shampoo - 200ml</h3>
-      <p class="price">MRP ₹499</p>
-      <p class="offer-price">Offer Price ₹449</p>
-      <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
-    </div>
-    <div class="product">
-      <img src="https://i.imgur.com/9eZB8So.jpeg" alt="Rosemary Shampoo">
-      <h3>Hibiscus + Rosemary Shampoo - 300ml</h3>
-      <p class="price">MRP ₹699</p>
-      <p class="offer-price">Offer Price ₹629</p>
-      <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
+  <section id="products">
+    <h2 style="text-align:center; font-family: 'Lora', serif; margin-bottom: 30px;">Our Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="WhatsApp%20Image%202025-05-21%20at%2017.15.11.jpeg" alt="Body Lotion">
+        <h3>Body Lotion - 300ml</h3>
+        <p class="price">MRP ₹639</p>
+        <p class="offer-price">Offer Price ₹575</p>
+        <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
+      </div>
+
+      <div class="product">
+        <h3>Hair Oil - 100ml</h3>
+        <p class="price">MRP ₹799</p>
+        <p class="offer-price">Offer Price ₹719</p>
+        <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
+      </div>
+
+      <div class="product">
+        <img src="WhatsApp%20Image%202025-05-21%20at%2017.15.53.jpeg" alt="Avocado Shampoo">
+        <h3>Avocado + Moringa Shampoo - 200ml</h3>
+        <p class="price">MRP ₹599</p>
+        <p class="offer-price">Offer Price ₹539</p>
+        <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
+      </div>
+
+      <div class="product">
+        <img src="WhatsApp%20Image%202025-05-21%20at%2017.15.53.jpeg" alt="Avocado Shampoo">
+        <h3>Avocado + Moringa Shampoo - 300ml</h3>
+        <p class="price">MRP ₹799</p>
+        <p class="offer-price">Offer Price ₹719</p>
+        <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
+      </div>
+
+      <div class="product">
+        <img src="WhatsApp%20Image%202025-05-21%20at%2017.16.32.jpeg" alt="Rosemary Shampoo">
+        <h3>Hibiscus + Rosemary Shampoo - 200ml</h3>
+        <p class="price">MRP ₹499</p>
+        <p class="offer-price">Offer Price ₹449</p>
+        <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
+      </div>
+
+      <div class="product">
+        <img src="WhatsApp%20Image%202025-05-21%20at%2017.16.32.jpeg" alt="Rosemary Shampoo">
+        <h3>Hibiscus + Rosemary Shampoo - 300ml</h3>
+        <p class="price">MRP ₹699</p>
+        <p class="offer-price">Offer Price ₹629</p>
+        <a href="https://wa.me/918755447918" class="button" target="_blank">Order Now</a>
+      </div>
     </div>
   </section>
 
-  <section class="about-contact" id="about">
-    <h2>About Us</h2>
-    <p>Revaya is a wellness brand born from the essence of nature. We craft haircare and skincare products using naturally derived ingredients, free from harsh chemicals. Our mission is to offer purity in every drop and promote a healthy, sustainable lifestyle for your skin and hair.</p>
+  <section id="about">
+    <h2 style="text-align:center; font-family: 'Lora', serif;">About Us</h2>
+    <p style="max-width:700px; margin:auto; text-align:center; margin-top:20px;">
+      Revaya is a wellness brand born from the essence of nature. We craft haircare and skincare products using naturally derived ingredients, free from harsh chemicals. Our mission is to offer purity in every drop and promote a healthy, sustainable lifestyle.
+    </p>
+  </section>
 
-    <h2 id="contact">Contact</h2>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/918755447918" target="_blank">+91 8755447918</a></p>
-    <p><strong>Email:</strong> <a href="mailto:green.glowenterprises2025@gmail.com">green.glowenterprises2025@gmail.com</a></p>
+  <section id="contact">
+    <h2 style="text-align:center; font-family: 'Lora', serif;">Contact</h2>
+    <p style="text-align:center; margin-top:10px;"><strong>WhatsApp:</strong> <a href="https://wa.me/918755447918" target="_blank">+91 8755447918</a></p>
+    <p style="text-align:center;"><strong>Email:</strong> <a href="mailto:green.glowenterprises2025@gmail.com">green.glowenterprises2025@gmail.com</a></p>
   </section>
 
   <footer>
     <p>&copy; 2025 Revaya. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
